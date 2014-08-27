@@ -7,9 +7,10 @@ add-apt-repository -y ppa:webupd8team/java
 add-apt-repository -y ppa:cassou/emacs
 apt-get update
 echo 'INSTALLING APACHE & CURL'
-apt-get install -y apache2
-rm -rf /var/www
-ln -fs /vagrant /var/www
+# cassandra node shouldn't need apache
+# apt-get install -y apache2
+# rm -rf /var/www
+# ln -fs /vagrant /var/www
 # apt-get --yes --force-yes install curl
 apt-get -y install curl
 
